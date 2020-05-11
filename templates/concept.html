@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Definition
+
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Definition</h1><br>
+
+<h3><b>
+    {{ current_concept.concept }}:
+  </b></h3><br>
+
+<p>{{ current_concept.explanation }}</p><br>
+
+<p align="right">
+  <!--<button type="button" class="btn btn-outline-dark"><a href="{{ url_for('concept', concept_id=next_concept.id) }}">{{ next_concept.concept }}</a></button>-->
+  <a href="{{ url_for('concept', concept_id=next_concept.id) }}" class="btn btn-dark
+    role=" button">{{ next_concept.concept }}</a>
+</p>
+
+<br>
+
+<p style=color:gray"><i>This information will be updated, last updated: July 2019.</i></p><br><br>
+<hr>
+
+<p>
+
+  <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+  <a href="{{ url_for('index') }}" class="btn btn-dark role=" button">Back to Search</a>
+
+  <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+  <a href="{{ url_for('mission') }}" class="btn btn-outline-dark" button">Mission</a>
+
+
+  <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+  <a href="{{ url_for('references') }}" class="btn btn-outline-dark" button">References</a>
+
+</p>
+
+{% endblock %}

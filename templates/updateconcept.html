@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block title %}
+IB Concepts
+{% endblock %}
+
+{% block body %}
+
+<h1>Select from the list of concepts to update: <span style="color: #0275d8">{{selected_concept.concept}}</span></h1>
+<br />
+<p> {{selected_concept.explanation}} </p>
+<br />
+
+{% for concept in concepts %}
+
+<ul>
+
+  <li><a href="{{ url_for('getData', concept_id=concept.id) }}">{{ concept.concept }}</a></li>
+
+</ul>
+
+{% endfor %}<br><br><br>
+
+{% endblock %}

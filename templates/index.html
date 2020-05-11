@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block title %}
+IB Concepts
+{% endblock %}
+
+{% block body %}
+
+<br>
+
+<h1 align="middle" , style="font-size:160%">{{ total_concepts }} banking and finance
+  concepts</h1>
+<br>
+
+<form action="{{ url_for('searchresult') }}" method="get">
+  <table align=center>
+    <tr>
+      <td width="90%">
+        <div class="form-group">
+          <div class="col-xs-2">
+
+            <input class="form-control" name="name" placeholder="Search for a concept or just hit search" />
+          </div>
+
+        </div>
+      </td>
+      <td width="100%">
+
+        <div class="form-group">
+          <button class="btn btn-dark">Search</button>
+        </div>
+      </td>
+    </tr>
+  </table>
+</form>
+
+<br><br><br>
+<h1 style="font-size:75%; color:gray" align="middle"><i>Coming soon: read the latest articles from
+    <a href=https://www.bloomberg.com>Bloomberg </a>, <a href=https://www.ft.com>Financial Times</a> & <a
+      href=https://www.economist.com>The Economist</a>. </i> </h1> <br><br>
+      <hr>
+
+      <p align="middle">
+
+        <a href="{{ url_for('mission') }}" class="btn btn-outline-dark" role="button">Mission</a>
+
+
+        <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+        <a href="{{ url_for('references') }}" class="btn btn-outline-dark" role="button">References</a>
+
+      </p>
+
+      {% endblock %}

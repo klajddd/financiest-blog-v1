@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+Search Result
+
+{% endblock %}
+
+
+{% block body %}
+<br>
+<div align=center>
+  <h1>There are no results for: <b>{{ input_concept }}</b></b></h1><br>
+
+  <h3>Read about:</h3>
+  <br>
+  <table>
+    <tr>
+      <td>
+
+        {% for concept in concepts %}
+
+        <ul>
+
+          <li><a href="{{ url_for('concept', concept_id=concept.id) }}">{{ concept.concept }}</a></li>
+
+        </ul>
+
+        {% endfor %}<br><br><br>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<hr>
+
+<p>
+
+  <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+  <a href="{{ url_for('index') }}" class="btn btn-dark" role="button">Back to Search</a>
+
+  <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+  <a href="{{ url_for('mission') }}" class="btn btn-outline-dark" role="button">Mission</a>
+
+
+  <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+  <a href="{{ url_for('references') }}" class="btn btn-outline-dark" role="button">References</a>
+
+</p>
+{% endblock %}

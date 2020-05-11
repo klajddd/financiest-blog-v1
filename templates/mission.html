@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Mission
+{% endblock %}
+
+
+{% block body %}
+
+<h1>Mission</h1>
+
+<br>
+
+<p>
+
+  <p>The mission of Financiest.com is to empower and engage people around the world to build, advance and apply their
+    knowledge of financial concepts.
+
+  </p><br><br><br><br><br>
+
+  <hr>
+
+  <p>
+
+    <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+    <a href="{{ url_for('index') }}" class="btn btn-outline-dark" role="button">Back to Search</a>
+
+    <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+    <!--<a href="{{ url_for('mission') }}" class="btn btn-outline-primary" role="button">Mission</a>-->
+
+
+    <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+    <a href="{{ url_for('references') }}" class="btn btn-outline-dark" role="button">References</a>
+
+  </p>
+
+  {% endblock %}

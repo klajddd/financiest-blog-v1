@@ -1,0 +1,8 @@
+Flask==1.0.2
+Flask-Cors==3.0.7
+html5lib==1.0.1
+Flask-Session==0.3.1
+requests==2.21.0
+SQLAlchemy==1.2.15
+gunicorn
+psycopg2==2.8.3

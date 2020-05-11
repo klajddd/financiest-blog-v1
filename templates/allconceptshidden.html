@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+All Concepts
+
+{% endblock %}
+
+
+{% block body %}
+
+<h1>All Concepts</h1><br>
+
+{% for concept in concepts %}
+
+<ul>
+
+  <li><a href="{{ url_for('concept', concept_id=concept.id) }}">{{ concept.concept }}</a></li>
+
+</ul>
+
+{% endfor %}<br><br><br>
+
+<hr>
+
+<p>
+
+  <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+  <a href="{{ url_for('index') }}" class="btn btn-outline-primary" role="button">Back to Search</a>
+
+  <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+  <a href="{{ url_for('mission') }}" class="btn btn-outline-primary" role="button">Mission</a>
+
+
+  <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+  <a href="{{ url_for('references') }}" class="btn btn-outline-primary" role="button">References</a>
+
+</p>
+{% endblock %}

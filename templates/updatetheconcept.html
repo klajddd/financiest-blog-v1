@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}
+IB Concepts
+{% endblock %}
+
+{% block body %}
+
+<h1>Select from the list of concepts to update: <span style="color: #0275d8">{{selected_concept.concept}}</span></h1>
+<br />
+<p> {{selected_concept.explanation}} </p>
+<br />
+<form action="{{ url_for('updatedone', id=selected_concept.id) }}" method="get">
+
+  <div class="form-group">
+    <div class="col-xs-2">
+
+      <textarea class="form-control" name="conceptdefinition" rows="5"
+        placeholder="Paste definition, edit and click update" autocomplete="off"></textarea>
+
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary btn pull-right">Update</button>
+  </div>
+  <br /><br />
+
+</form>
+
+{% for concept in concepts %}
+
+<ul>
+
+  <li><a href="{{ url_for('getData', concept_id=concept.id) }}">{{ concept.concept }}</a></li>
+
+</ul>
+
+{% endfor %}<br><br><br>
+
+{% endblock %}

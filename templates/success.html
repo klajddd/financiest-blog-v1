@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Success!
+{% endblock %}
+
+{% block body %}
+<h1>Success!</h1>
+
+You have successfully booked your flight.
+{% endblock %}
+{% block footerblock%}
+<hr>
+<p>
+  <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+  <a href="{{ url_for('index') }}" class="btn btn-outline-primary" role="button">Back to Search</a>
+
+  <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+  <a href="{{ url_for('mission') }}" class="btn btn-outline-primary" role="button">Mission</a>
+
+
+  <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+  <a href="{{ url_for('references') }}" class="btn btn-outline-primary" role="button">References</a>
+
+</p>
+{% endblock %}

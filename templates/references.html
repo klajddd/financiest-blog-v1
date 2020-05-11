@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}
+References
+{% endblock %}
+
+
+{% block body %}
+
+<h1>References</h1>
+
+<br><br>
+
+<p>
+
+  <h3>Books:</h3>
+
+  <ul>
+
+    <li>
+
+      <p>Principles of Corporate Finance - J. Brealey, S. Myers, F. Allen - <a
+          href="https://www.amazon.co.uk/Principles-Corporate-Finance-Richard-Brealey/dp/1260565556/ref=dp_ob_title_bk">Amazon</a>
+      </p>
+
+    </li>
+
+    <li>
+
+      <p>Options, Futures, and Other Derivatives - J. C. Hull - <a
+          href="https://www.amazon.co.uk/Options-Futures-Other-Derivatives-John/dp/013447208X">Amazon</a></p>
+
+    </li>
+
+    <li>
+
+      <p>Corporate Finance - D.Hillier, S. Ross, R. Westerfield, J. Jaffe, B. Jordan - <a
+          href="https://www.amazon.co.uk/Corporate-Finance-David-Hillier/dp/0077121155">Amazon</a></p>
+
+    </li>
+
+  </ul><br>
+
+  <!--<h3>Online learning:</h3>-->
+
+  <!--<ul>-->
+
+  <!--<li>-->
+
+  <!--<p>Harvard Business School Online Learning - The Credential of Readiness (CORe) - <a href="https://online-learning.harvard.edu/course/core">Harvard.edu</a></p>-->
+
+  <!--</li>-->
+
+  <!--</ul>-->
+
+</p><br><br><br><br><br>
+
+<hr>
+
+<p>
+
+  <!--<a href="{{ url_for('index') }}"><u>Back to Search</u></a> &nbsp;-->
+  <a href="{{ url_for('index') }}" class="btn btn-outline-dark" role="button">Back to Search</a>
+
+  <!--<a href="{{ url_for('mission') }}"><u>Mission</u></a> &nbsp;-->
+  <a href="{{ url_for('mission') }}" class="btn btn-outline-dark" role="button">Mission</a>
+
+
+  <!--<a href="{{ url_for('references') }}"><u>References</u></a>-->
+  <!--<a href="{{ url_for('references') }}" class="btn btn-outline-primary" role="button">References</a>-->
+
+</p>
+
+{% endblock %}
